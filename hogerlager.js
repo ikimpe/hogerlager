@@ -48,7 +48,7 @@ function vergelijk (oudgetal, input){
         document.getElementById("bericht").innerHTML=bericht;
     }
     getal = nieuwgetal;
-    if (tellerAantalKerenGeraden=>20){
+    if (tellerAantalKerenGeraden>=20){
         endGame(bericht);
     }
 }
