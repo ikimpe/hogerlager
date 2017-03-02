@@ -48,7 +48,14 @@ function vergelijk (oudgetal, input){
         document.getElementById("bericht").innerHTML=bericht;
     }
     getal = nieuwgetal;
-    if (tellerAantalKerenGeraden=>20){
-        gameover();
+    if (tellerAantalKerenGeraden>=20){
+        endGame(bericht);
     }
+}
+function endGame(bericht){
+    document.getElementById("hoger").setAttribute("disabled", "disabled");
+    document.getElementById("lager").setAttribute("disabled", "disabled");
+    bericht += "<br> u heeft 20 keer geraden.<br>Het spel is afgelopen!"
+    document.getElementById("bericht").innerHTML=bericht;
+    document.getElementsByClassName("hippiebus")[0].setAttribute("display", "block");
 }
