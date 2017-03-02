@@ -57,5 +57,5 @@ function endGame(bericht){
     document.getElementById("lager").setAttribute("disabled", "disabled");
     bericht += "<br> u heeft 20 keer geraden.<br>Het spel is afgelopen!"
     document.getElementById("bericht").innerHTML=bericht;
-    document.getElementsByClassName("hippiebus")[0].setAttribute("display", "block");
+    document.getElementsByClassName("hippiebus")[0].style.display = "block";
 }
