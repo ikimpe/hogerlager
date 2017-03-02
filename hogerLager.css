@@ -1,3 +1,15 @@
+@keyframes moveVan{
+    0%{margin-left: 0%;}
+    50%{margin-left: 100%;}
+    0%{margin-left: 0%;}
+}
+
+.hippiebus{
+    animation-name: moveVan;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+}
+
 body{
     background-color: darkorange;
 }
