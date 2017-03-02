@@ -5,6 +5,7 @@
 }
 
 .hippiebus{
+    display: none;
     animation-name: moveVan;
     animation-duration: 5000ms;
     animation-iteration-count: infinite;
