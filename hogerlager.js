@@ -5,13 +5,14 @@ window.onload = init;
 var tellerAantalKerenGeraden = 0;
 var tellerJuistGeraden = 0;
 var tellerFoutGeraden = 0;
+var getal;
 
 
 function init (){
-    var getal = geefRandomGetal();
+    getal = geefRandomGetal();
     document.getElementById("getal1").innerHTML=getal;
-    document.getElementById("hoger").onclick = vergelijk(getal,"hoger");
-    document.getElementById("lager").onclick = vergelijk(getal,"lager");
+    document.getElementById("hoger").addEventListener("click", function() {vergelijk(getal, "hoger")});
+    document.getElementById("lager").addEventListener("click", function() {vergelijk(getal, "lager")});
 
 }
 function geefRandomGetal(){
@@ -43,5 +44,11 @@ function vergelijk (oudgetal, input){
     };
     bericht += "<br>juist geraden getallen = "+tellerJuistGeraden+"<br>fout geraden getallen = "+tellerFoutGeraden;
     document.getElementById("getal1").innerText=nieuwgetal;
-    document.getElementById("bericht").innerHTML=bericht;
+    if (tellerAantalKerenGeraden>0){
+        document.getElementById("bericht").innerHTML=bericht;
+    }
+    getal = nieuwgetal;
+    if (tellerAantalKerenGeraden=>20){
+        gameover();
+    }
 }
