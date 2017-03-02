@@ -49,6 +49,12 @@ function vergelijk (oudgetal, input){
     }
     getal = nieuwgetal;
     if (tellerAantalKerenGeraden=>20){
-        gameover();
+        endGame(bericht);
     }
+}
+function endGame(bericht){
+    document.getElementById("hoger").setAttribute("disabled", "disabled");
+    document.getElementById("lager").setAttribute("disabled", "disabled");
+    bericht += "<br> u heeft 20 keer geraden.<br>Het spel is afgelopen!"
+    document.getElementById("bericht").innerHTML=bericht;
 }
